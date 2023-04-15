@@ -4,22 +4,22 @@ import jakarta.persistence.Embeddable;
 
 @Embeddable
 public class Description {
-    private String full;
-    private String little;
+    private String longDescription;
+    private String littleDescription;
 
-    public String getFull() {
-        return full;
+    public String getLongDescription() {
+        return longDescription;
     }
 
-    public void setFull(String full) {
-        this.full = full;
+    public void setLongDescription(String longDescription) {
+        this.longDescription = longDescription;
     }
 
-    public String getLittle() {
-        return little;
+    public String getLittleDescription() {
+        return littleDescription;
     }
 
-    public void setLittle(String little) {
-        this.little = little;
+    public void setLittleDescription(String littleDescription) {
+        this.littleDescription = littleDescription;
     }
 }

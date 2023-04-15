@@ -17,9 +17,6 @@ public class User {
     private String password;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name="user_id")
-    private List<Project> accounts;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name="user_id")
     private List<Role> roles;
 
     public User() {
@@ -36,7 +33,6 @@ public class User {
         this.name = name;
         this.username = username;
         this.password = password;
-        this.accounts = accounts;
         this.roles = roles;
     }
 
@@ -71,14 +67,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public List<Project> getAccounts() {
-        return accounts;
-    }
-
-    public void setAccounts(List<Project> accounts) {
-        this.accounts = accounts;
     }
 
     public List<Role> getRoles() {
