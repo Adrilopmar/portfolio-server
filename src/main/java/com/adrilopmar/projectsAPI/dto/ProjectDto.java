@@ -1,34 +1,43 @@
 package com.adrilopmar.projectsAPI.dto;
 
-import com.adrilopmar.projectsAPI.classes.Description;
-import com.adrilopmar.projectsAPI.classes.Image;
-import com.adrilopmar.projectsAPI.classes.Step;
-import com.adrilopmar.projectsAPI.classes.Tech;
+import com.adrilopmar.projectsAPI.classes.*;
+import com.adrilopmar.projectsAPI.model.Backlog;
+import com.adrilopmar.projectsAPI.model.Technology;
 
 import java.util.List;
 
 public class ProjectDto {
-
+    private Name name;
     private Description description;
-    private List<Step> backlog;
-    private List<Tech> technologies;
+    private List<Backlog> backlog;
+    private List<Technology> technologies;
     private Image images;
     private String website;
 
     public ProjectDto() {
     }
-    public ProjectDto(Description description, List<Step> backlog, List<Tech> technologies, Image images) {
+    public ProjectDto(Name name, Description description, List<Backlog> backlog, List<Technology> technologies, Image images) {
+        this.name = name;
         this.description = description;
         this.backlog = backlog;
         this.technologies = technologies;
         this.images = images;
     }
-    public ProjectDto(Description description, List<Step> backlog, List<Tech> technologies, Image images, String website) {
+    public ProjectDto(Name name, Description description, List<Backlog> backlog, List<Technology> technologies, Image images, String website) {
+        this.name = name;
         this.description = description;
         this.backlog = backlog;
         this.technologies = technologies;
         this.images = images;
         this.website = website;
+    }
+
+    public Name getName() {
+        return name;
+    }
+
+    public void setName(Name name) {
+        this.name = name;
     }
 
     public Description getDescription() {
@@ -39,19 +48,19 @@ public class ProjectDto {
         this.description = description;
     }
 
-    public List<Step> getBacklog() {
+    public List<Backlog> getBacklog() {
         return backlog;
     }
 
-    public void setBacklog(List<Step> backlog) {
+    public void setBacklog(List<Backlog> backlog) {
         this.backlog = backlog;
     }
 
-    public List<Tech> getTechnologies() {
+    public List<Technology> getTechnologies() {
         return technologies;
     }
 
-    public void setTechnologies(List<Tech> technologies) {
+    public void setTechnologies(List<Technology> technologies) {
         this.technologies = technologies;
     }
 

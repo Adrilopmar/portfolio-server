@@ -5,7 +5,15 @@ import jakarta.persistence.Embeddable;
 @Embeddable
 public class Tech {
     private String name;
-    private String linkLogo;
+    private String logo;
+
+    public Tech() {
+    }
+
+    public Tech(String name, String logo) {
+        this.name = name;
+        this.logo = logo;
+    }
 
     public String getName() {
         return name;
@@ -15,11 +23,11 @@ public class Tech {
         this.name = name;
     }
 
-    public String getLinkLogo() {
-        return linkLogo;
+    public String getLogo() {
+        return logo;
     }
 
-    public void setLinkLogo(String linkLogo) {
-        this.linkLogo = linkLogo;
+    public void setLogo(String logo) {
+        this.logo = logo;
     }
 }
