@@ -19,8 +19,8 @@ public class Project {
     private Name name;
     @Embedded
     @AttributeOverrides({
-            @AttributeOverride(name = "longDescription", column = @Column(name = "long_description", columnDefinition = "VARCHAR(2047)")),
-            @AttributeOverride(name = "littleDescription", column = @Column(name = "little_description",columnDefinition = "VARCHAR(2047)"))
+            @AttributeOverride(name = "longDescription", column = @Column(name = "long_description", columnDefinition = "TEXT")),
+            @AttributeOverride(name = "littleDescription", column = @Column(name = "little_description",columnDefinition = "TEXT"))
     })
     private Description description;
 
@@ -32,11 +32,11 @@ public class Project {
 
     @Embedded
     @AttributeOverrides({
-            @AttributeOverride(name = "cover", column = @Column(name = "cover_image",columnDefinition = "VARCHAR(1023)")),
-            @AttributeOverride(name = "portrait", column = @Column(name = "portrait_image",columnDefinition = "VARCHAR(1023)"))
+            @AttributeOverride(name = "cover", column = @Column(name = "cover_image")),
+            @AttributeOverride(name = "portrait", column = @Column(name = "portrait_image"))
     })
     private Image images;
-    @Column(columnDefinition = "VARCHAR(1023)")
+    @Column
     private String website;
 
     public Project() {
