@@ -16,7 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/projects")
-@CrossOrigin(origins ="http://localhost:3000")
+@CrossOrigin(origins ="https://adrialopmar-portfolio.netlify.app")
 public class ProjectControllerImpl implements ProjectController {
     @Autowired
     ProjectRepository projectRepository;

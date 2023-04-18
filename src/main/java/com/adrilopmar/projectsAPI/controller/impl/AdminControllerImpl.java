@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/admin")
-@CrossOrigin(origins ="http://localhost:3000")
+@CrossOrigin()
 public class AdminControllerImpl {
 
     @Autowired
@@ -19,7 +19,7 @@ public class AdminControllerImpl {
 
     @PostMapping("/new")
     @ResponseStatus(HttpStatus.CREATED)
-    public User AddAdmin(Authentication authentication, @RequestBody @Valid AdminDto adminDto) {
-        return adminService.createAdmin(adminDto, authentication);
+    public User AddAdmin( @RequestBody @Valid AdminDto adminDto) {
+        return adminService.createAdmin(adminDto);
     }
 }
