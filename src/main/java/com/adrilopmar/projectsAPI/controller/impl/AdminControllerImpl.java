@@ -18,7 +18,7 @@ public class AdminControllerImpl {
 
     @PostMapping("/new")
     @ResponseStatus(HttpStatus.CREATED)
-    public User AddAdmin( @RequestBody @Valid AdminDto adminDto) {
-        return adminService.createAdmin(adminDto);
+    public User AddAdmin( @RequestBody @Valid AdminDto adminDto,Authentication authentication) {
+        return adminService.createAdmin(adminDto, authentication);
     }
 }
