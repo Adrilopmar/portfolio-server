@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/mail")
-@CrossOrigin()
 public class EmailController {
     @Autowired
     EmailServiceImpl emailService;
