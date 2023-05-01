@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/mail")
+@CrossOrigin(origins ="https://adrialopmar-portfolio.netlify.app")
 public class EmailController {
     @Autowired
     EmailServiceImpl emailService;
